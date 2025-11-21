@@ -9,19 +9,40 @@ html {
 
 header {
     background-color: rgb(170, 240, 30);
+    align-items: center;
+    width: auto;
+    .bannerNav {
+        display: flex;
+        justify-content: center;
 
-    .navImage {
-        .logo {
+        .bann1 {
+            background-color:  rgb(170, 240, 30);
             img {
-                width: 150px;
-                margin-left: 50px;
+                margin-top: 15px;
+                height: 150px;
             }
         }
-
-        background-image: url(../assets/navimg.jpg);
-        background-repeat: no-repeat;
-        background-position: right;
+        .bann2 {
+            background-color: rgb(170, 240, 30);
+            height: 200px;
+            width: 680px;
+            text-align: center;
+            justify-content: center;
+            font-size: larger;
+            font-family:sans-serif;
+        }
+        .bann3 {
+            align-items: center;
+            background-color: rgb(78, 125, 167);
+            height: 200px;
+            width: 1500px;
+            background-image: url(../assets/navimg.jpg);
+            background-repeat: no-repeat;
+            background-position: right;
+        }
     }
+
+    
 
     .menu {
         display: flex;
