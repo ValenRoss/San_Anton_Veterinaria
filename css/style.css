@@ -1,0 +1,151 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    background-color: rgb(81, 33, 121);
+}
+
+header {
+    background-color: rgb(170, 240, 30);
+
+    .navImage {
+        .logo {
+            img {
+                width: 150px;
+                margin-left: 50px;
+            }
+        }
+
+        background-image: url(../assets/navimg.jpg);
+        background-repeat: no-repeat;
+        background-position: right;
+    }
+
+    .menu {
+        display: flex;
+        justify-content: center;
+        background-color: black;
+        height: 50px;
+
+        .boton {
+            display: flex;
+            align-items: center;
+            font-size: larger;
+            justify-content: center;
+            color: rgb(170, 240, 30);
+            background-color: black;
+            width: 100px;
+            border: none;
+            padding: 20px;
+            text-decoration: none;
+
+        }
+
+        a:hover {
+            background-color: yellowgreen;
+            color: black;
+        }
+
+    }
+}
+/* Banner carrousel */
+.banner-carousel {
+    width: 800px;
+    height: 200px;
+    margin: 40px auto;
+    overflow: hidden;
+    border-radius: 10px;
+    background: #000;
+}
+
+.banner-track {
+    display: flex;
+    animation: scroll 15s linear infinite;
+}
+
+.banner-carousel:hover .banner-track {
+    animation-play-state: paused;
+}
+
+.banner-track img {
+    width: 800px;
+    height: 200px;
+}
+
+@keyframes scroll {
+    0%   { transform: translateX(0); }
+    100% { transform: translateX(-400%); }
+}
+/* Fin del banner */
+
+  :root{
+    --bg:#0f1724;     /* fondo oscuro */
+    --card:#0b1a2b;   /* tarjeta */
+    --accent:#7dd3fc; /* acento suave */
+    --muted:#cbd5e1;  /* texto secundario */
+  }
+
+  .vet-footer{
+    background: linear-gradient(180deg,var(--bg), #071226);
+    color: #e6eef6;
+    padding: 40px 20px 18px;
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  }
+
+  .vet-footer .container{
+    max-width:1100px;
+    margin:0 auto;
+    display:grid;
+    grid-template-columns: repeat(3,1fr);
+    gap:28px;
+  }
+
+  .vet-col .logo{
+    display:flex;
+    gap:10px;
+    align-items:center;
+    text-decoration:none;
+    color:inherit;
+    font-weight:700;
+    margin-bottom:10px;
+  }
+
+  .vet-col .logo svg{ width:36px; height:36px; color:var(--accent); flex-shrink:0; }
+  .vet-col p{ color:var(--muted); margin:0 0 12px 0; line-height:1.4; font-size:0.95rem; }
+
+  .vet-col h4{ margin:0 0 10px 0; font-size:1.05rem; }
+  .vet-col ul{ list-style:none; padding:0; margin:0; color:var(--muted); }
+  .vet-col ul li{ display:flex; gap:10px; align-items:center; margin-bottom:8px; font-size:0.95rem; }
+
+  .icon{ width:18px; height:18px; fill:currentColor; opacity:0.85; color:var(--accent); flex-shrink:0; }
+
+  .socials{ margin-top:10px; display:flex; gap:12px; }
+  .social{ display:inline-flex; width:36px; height:36px; align-items:center; justify-content:center; border-radius:8px; background:rgba(255,255,255,0.03); text-decoration:none; color:var(--muted); }
+  .social svg{ width:20px; height:20px; color:var(--muted); }
+
+  .vet-bottom{
+    border-top:1px solid rgba(255,255,255,0.04);
+    margin-top:26px;
+    padding-top:14px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    max-width:1100px;
+    margin-left:auto;
+    margin-right:auto;
+    gap:12px;
+    flex-wrap:wrap;
+  }
+
+  .vet-bottom small{ color:var(--muted); }
+  .legal{ display:flex; gap:14px; }
+  .legal a{ color:var(--muted); text-decoration:none; font-size:0.9rem; }
+
+  /* Responsive */
+  @media (max-width:900px){
+    .vet-footer .container{ grid-template-columns: 1fr; }
+    .vet-bottom{ flex-direction:column; align-items:flex-start; gap:8px; }
+    .legal{ order:2; }
+  }
